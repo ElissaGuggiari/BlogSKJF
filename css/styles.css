@@ -1,0 +1,23 @@
+/*-----First Rules-----*/
+body,
+html {
+    margin: 0;
+    height: 100%;
+}
+
+/* body {
+} */
+
+/*-----First section-----*/
+.main {
+    height: 100%;
+    width: 100%;
+    background-color: red;
+}
+
+/*-----Footer-----*/
+.footer {
+    height: 100%;
+    width: 100%;
+    background-color: blue;
+}
