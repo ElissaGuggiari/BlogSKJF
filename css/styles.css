@@ -83,7 +83,7 @@ h6 {
 a {
     font-size: 20px;
     text-decoration: none;
-    color: black !important;
+    color: black;
 }
 p {
     color: white;
@@ -108,5 +108,5 @@ ul li a {
     outline: none;
 }
 a:hover {
-    color: white;
+    color: white !important;
 }
