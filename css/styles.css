@@ -2,6 +2,7 @@
 * {
     padding: 0;
     margin: 0;
+   box-sizing: border-box;
 }
 
 /*-----Body-----*/
@@ -25,6 +26,7 @@ header {
     position: fixed;
     top: 0;
 }
+
 
 .logoSKJF {
     min-height: 85px;
@@ -52,7 +54,6 @@ nav {
     padding: 0 0 5%;
 }
 
-
 /* .cover_big {
     width: 153.8%;
     min-height: 1000px;
@@ -77,11 +78,13 @@ nav {
 
 aside,
 main {
-    width: 65%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 5%;
     z-index: 1;
+    display: flex;
+    
 }
 
 /*-----Footer-----*/
