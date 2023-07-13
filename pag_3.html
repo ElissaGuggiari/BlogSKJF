@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Biglietti</title>
+	<link rel="stylesheet" href="css/stili.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@400;600&family=Ubuntu&display=swap" rel="stylesheet">
+	<!--codice per effettuare lo smooth scrolling-->
+<script>
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+</script>
+
+</head>
+
+			
+<body>
+	<div id="wrapper">
+		<header>
+			<div class="logoSKJF"></div>
+			<nav>
+				<ul>
+					<li><a href="index.html">festival</a></li>
+					<li><a href="pag_2.html">cori</a></li>
+					<li><a href="pag_3.html" class="current">biglietti</a></li>
+					<li><a href="pag_4.html">shop</a></li>
+					<li><a href="pag_5.html">contatti</a></li>
+				</ul>
+			</nav>
+		</header> <!--end of header-->
+		
+		<main>
+				<div class="cover_small2"></div>		
+			
+
+				<div class="principal"><h1>biglietti</h1></div>				
+				
+				
+			
+				<div class="small_w_price_grid float_left">
+					<div class="img_small_price"> <img src="img/giornata.jpg" alt="singola giornata" class="flex_img_all"> </div>
+					<div class="filter_small_price"> </div>
+					<div class="price"> <h1>50.-</h1> </div>
+					<div class="name"> <h4>la singola giornata</h4></div>
+				</div> 
+				
+				<div class="clear_short_right"></div>
+
+				<div class="small_w_price_grid float_right">
+					<div class="img_small_price"> <img src="img/weekend.jpg" alt="weekend" class="flex_img_all"> </div>
+					<div class="filter_small_price"> </div>
+					<div class="price"> <h1>80.-</h1> </div>
+					<div class="name"> <h4>il weekend</h4></div>
+				</div> 
+			
+				<div class="clear_long"></div>
+
+			
+				<div class="small_w_price_grid float_left">
+					<div class="img_small_price"> <img src="img/chiesa.jpg" alt="chiesa" class="flex_img_all"> </div>
+					<div class="filter_small_price"> </div>
+					<div class="price"> <h1>30.-</h1> </div>
+					<div class="name"> <h4>in chiesa</h4></div>
+				</div> 
+			
+				<div class="clear_short_right"></div>
+
+			
+			
+				<div class="small_w_price_grid float_right">
+					<div class="img_small_price"> <img src="img/sala_concerto.jpg" alt="sale da concerto" class="flex_img_all"> </div>
+					<div class="filter_small_price"> </div>
+					<div class="price"> <h1>100.-</h1> </div>
+					<div class="name"> <h4>in sala da concerto</h4></div>
+				</div> 
+			
+				<div class="clear_long"></div>
+
+			
+				<div class="small_w_price_grid float_left">
+					<div class="img_small_price"> <img src="img/festival.jpg" alt="festival completo" class="flex_img_all"> </div>
+					<div class="filter_small_price"> </div>
+					<div class="price"> <h1>200.-</h1> </div>
+					<div class="name"> <h4>il festival completo</h4></div>
+				</div> 
+			
+				<div class="clear_short_right"></div>
+
+			
+			
+				<div class="small_w_price_grid float_right">
+					<div class="img_small_price"> <img src="img/giornata.jpg" alt="alloggio" class="flex_img_all"> </div>
+					<div class="filter_small_price"> </div>
+					<div class="price"> <h1>100.-</h1> </div>
+					<div class="name"> <h4>l'alloggio</h4></div>
+				</div> 
+	
+				<div class="clear"></div>
+			
+			
+			
+			
+				<div class="principal"><h1>mappa</h1></div>				
+				
+				
+				<div class="map_grid">
+					<div class="map_img"><img src="img/mappa@2x.jpg" alt="mappa" class="flex_img_all"> </div>
+					<div class="map_filter"> </div>
+					<div class="map_text"><p>
+						concerti in piazza: <br>
+						Kirche St. Anton Langenstrasse 3<br>
+						Matthäus kirche, Hertenstrasse 20<br>
+						Jesuitekirche, Bahnhofstrasse 1<br>
+						<br>
+						concerti nelle halls:<br>
+						Messe Halle 1, Horwerstrasse 87 <br>
+						KKL saal 1, Europaplatz 1<br>
+						<br>
+						concerti cantiamo insieme:<br>
+						HSLU Musik, Oberstrasse 3<br>
+						<br>
+						workshops:<br>
+						Südpol Arsenalstrasse 28</p>
+					</div>
+				</div>	
+				
+			</main> <!-- end of content -->
+			
+		
+	  <footer>
+    <h3 class="sponsor">i nostri partner e sponsor:</h3>
+    <div class="sponsor-icons flex">
+      <div><img src="img/fondation_suisa.png" alt="fondation suisa"></div>
+      <div><img src="img/ch.png" alt="svizzera"></div>
+      <div><img src="img/zurigo.png" alt="zurigo"></div>
+      <div><img src="img/atelier.png" alt="atelier winzeler"></div>
+    </div>
+    <h3 class="social">i nostri socials:</h3>
+    <div class="social-icons flex">
+      <div><a href="https://www.youtube.com/channel/UCHrQ-Hz76tHxav8AIaC6-9A/videos" target="_blank"><img src="img/YouTube.png" alt="canale Youtube SKJF"></a></div>
+      <div><a href="https://www.instagram.com/verein_skjf/?hl=de" target="_blank"><img src="img/Instagram.png" alt="profilo Instagram SKJF"></a></div>
+      <div><a href="https://www.facebook.com/SKJF-Schweizer-Kinder-und-Jugendchorfestival-183969058327876/" target="_blank"><img src="img/Facebook.png" alt="profilo Facebook SKJF"></a></div>
+    </div>
+    <div class="copyright"><h6>© 2020 SKJF - Swiss Kinder und Jugend-Chor Festival - NABA</h6></div>
+  </footer> <!-- end of footer -->
+		
+		
+		</div> <!-- end of wrapper -->
+</body>
+</html>

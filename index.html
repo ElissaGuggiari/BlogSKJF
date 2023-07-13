@@ -1,81 +1,157 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/styles.css">
-        <title>Blog Homepage</title>
-    </head>
-    <body>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Homepage</title>
+	<link rel="stylesheet" href="css/stili.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@400;600&family=Ubuntu&display=swap" rel="stylesheet">
+	<!--codice per effettuare lo smooth scrolling-->
+<script>
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+</script>
 
-        <!--Header-->
-        <header>
-            <div class="logoSKJF"></div>
+</head>
 
-            <!--Navigation Bar-->
-            <nav>
-                <ul>
-                    <li>
-                        <a href="index.html">homepage</a>
-                    </li>
-                    <li>
-                        <a href="#">about</a>
-                    </li>
-                    <li>
-                        <a href="#">archive</a>
-                    </li>
-                    <li>
-                        <a href="#">contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+			
+<body>
+	<div id="wrapper">	
+		<header>
+			<div class="logoSKJF"></div>
+			<nav>
+				<ul>
+					<li><a href="index.html" class="current">festival</a></li>
+					<li><a href="pag_2.html">cori</a></li>
+					<li><a href="pag_3.html">biglietti</a></li>
+					<li><a href="pag_4.html">shop</a></li>
+					<li><a href="pag_5.html">contatti</a></li>
+				</ul>
+			</nav>
+		</header> <!--end of header-->
 
-        <!--Main Section-->
-        <main>
-            <div class="text_on_top">
-                <h1>
-                    Singing in the name of SKJF!
-                </h1>
-            </div>
-            <div class="cover_big"><img
-                src="img/cover.jpg"
-                alt="A choir in front of the Chiesa San Nicolao in Lugano"
-                width="100%">
-            </div>
+		
+			<main>
+				<div class="cover_big"></div>
+				
+				
+				<div class="principal" id="sezione_1"><h1>introduzione</h1></div>
+				
+				<div class="grid_coro_big float_left">
+					<div class="img_coro"> <img src="img/Winterthur.jpg" alt="Winterthur" class="flex_img_all"></div>
+					<div class="filtro_coro"></div>
+					<div class="titolo_coro"><h4>Winterthur</h4></div>
+				</div> 
 
-            <div>
-                <h2>
-                    What is SKJF?
-                </h2>
-                <p>The SKJF is an event where children and young people sing together and where
-                    choir leaders, children and young people have the opportunity to meet, exchange,
-                    make contact and intensify their relationships. Choirs from all corners of
-                    Switzerland participate.</p>
-                <p>The acronym SKJF stands for Swiss Kinder und Jugend-Chor Festival.</p>
-                <a href="blog.html">Swiss choir competition</a>
-            </div>
-        </main>
+				<div class="clear_short_right"></div>
+				<div class="grid_text float_right">
+					<div class="grid_text_1"> <h3>quando</h3></div>
+					<div class="grid_text_2"> <p>Il prossimo Festival SKJF si terrà dal 26 al 29 maggio 2021 a Winterthur. Non vediamo l'ora che molti cori provenienti da tutta la Svizzera cantino su questa città culturale e industriale del cantone di Zurigo! <br><br> Quattro composizioni sono state assegnate a compositori svizzeri in tutte e quattro le regioni linguistiche. Queste nuove composizioni saranno incluse nel Songbook 2022 e presentate al Festival SKJF_22 Winterthur.</p></div>					 
+				</div> 
+				<div class="clear"></div>
+				
+				
+				<div class="principal"><h1>informazioni</h1></div>
+				
+				<div class="grid_text float_left">
+					<div class="grid_text_1"> <h3>chi</h3></div>
+					<div class="grid_text_2"> <p>Lo SKJF è una manifestazione in cui bambini e giovani cantano insieme e dove i direttori dei cori, i bambini e i giovani hanno la possibilità di incontro, di scambio, di contatto e di intensificare i loro rapporti. <br>
+					Partecipano cori da ogni angolo della Svizzera. <br><br>
+					I Workshops consistono in incontri di diversi cori e offrono:
+					composizioni musicali di regioni diverse;
+					concerti d'incontro;
+					intrattenimento tramite danze e teatro;
+					canti comuni, assieme al pubblico.</p></div>					 
+				</div> 
+			<div class="clear_short_right"></div>
+				<div class="grid_text float_right">
+					<div class="grid_text_1"> <h3>dove</h3></div>
+					<div class="grid_text_2"> <p>Il Festival Svizzero di Cori giovanili e di bambini SKJF si svolge ogni due anni negli anni dispari alternato all'EJCF Basilea.
+					Partecipano cori che vengono da ogni angolo della Svizzera. <br><br>
+					Si offrono spettacoli in piazza (gratuiti) e concerti nelle chiese e nelle halls concertistiche sparse per tutti gli angoli della città scelta, regalando musica a genitori, passanti, turisti, anziani e giovani ragazzi. <br><br>
+					Cantare per la gioia di cantare e far musica!</p></div>					 
+				</div> 
+			<div class="clear_long"></div>
+				<div class="small_w_bt_grid float_left">
+					<div class="img_small_bt"> <img src="img/biglietti.jpg" alt="biglietti" class="flex_img_all"> </div>
+					<div class="filter_small_bt"> </div>
+					<div class="button"><a href="pag_3.html"><h4>scopri di più</h4></a></div>
+					<div class="name"><h4>i biglietti</h4></div>
+				</div>
+			<div class="clear_short_right"></div>
+				<div class="small_w_bt_grid float_right">
+					<div class="img_small_bt"> <img src="img/programma.jpg" alt="programma" class="flex_img_all"> </div>
+					<div class="filter_small_bt"> </div>
+					<div class="button"><a href="pag_2.html"><h4>scopri di più</h4></a></div>
+					<div class="name"><h4>il programma</h4></div>
+				</div> 
+				
+				<div class="clear"></div>
+				
 
-        <!--Footer-->
-        <footer>
-            <div>
-                <ul>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Archive</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-                <div>
-                    <h4>© 2023 SKJF - Swiss Kinder und Jugend-Chor Festival - SPD</h4>
-                </div>
-            </div>
-        </footer>
-    </body>
+				<div class="principal"><h1>storia</h1></div>								
+				
+				 <div class="grid_quadro_text">
+					<div class="grid_quadro_text_1"> <p>L'Associazione Svizzera per la Promozione di Cori giovanili e di bambini SKJF promuove la cultura corale dei giovani e dei bambini in Svizzera mediante l'ispirazione, l'incitamento e lo scambio reciproci.</p></div>
+					<div class="grid_quadro_text_2"> <p>Dall'8 al 10 giugno 2007 si è svolto il primo Festival svizzero di cori giovanili e di bambini SKJF_07. Il Festival, sostenuto dalle associazioni dei cori, le scuole di musica e le chiese, ha avuto luogo a Zurigo e Zollikon.</p></div>
+					<div class="grid_quadro_text_3"> <p>L’assemblea costitutiva dell’Associazione Svizzera per la Promozione di Cori giovanili e di bambini SKJF si è svolta il 7 marzo 2006 a Zurigo. <br><br>L'associazione è membro dell'Unione Svizzera dei Cori. Questa garantisce l'organizzazione regolare del festival e promuove con altri progetti il collegamento tra i cori di bambini e giovanili svizzeri al di là dei confini linguistici.</p></div>
+					<div class="grid_quadro_text_4"> <p>In occasione dello svolgimento del World Youth Choir Summersession 2003 è stato creato lo «Hasliberger Forum» formato da grandi personalità della scena corale svizzera. Si è deciso di realizzare le tre idee fondamentali per la promozione dei cori di giovani ragazzi in Svizzera. <br><br> Uno di questi progetto è la Promozione di cori giovanili e di bambini - idea del Festival SKJF.</p></div>
+				</div> <!--end of grid quadro text -->
+
+			</main> <!-- end of content -->
+		
+		
+		
+	  <footer>
+    <h3 class="sponsor">i nostri partner e sponsor:</h3>
+    <div class="sponsor-icons flex">
+      <div><img src="img/fondation_suisa.png" alt="fondation suisa"></div>
+      <div><img src="img/ch.png" alt="svizzera"></div>
+      <div><img src="img/zurigo.png" alt="zurigo"></div>
+      <div><img src="img/atelier.png" alt="atelier winzeler"></div>
+    </div>
+    <h3 class="social">i nostri socials:</h3>
+    <div class="social-icons flex">
+      <div><a href="https://www.youtube.com/channel/UCHrQ-Hz76tHxav8AIaC6-9A/videos" target="_blank"><img src="img/YouTube.png" alt="canale Youtube SKJF"></a></div>
+      <div><a href="https://www.instagram.com/verein_skjf/?hl=de" target="_blank"><img src="img/Instagram.png" alt="profilo Instagram SKJF"></a></div>
+      <div><a href="https://www.facebook.com/SKJF-Schweizer-Kinder-und-Jugendchorfestival-183969058327876/" target="_blank"><img src="img/Facebook.png" alt="profilo Facebook SKJF"></a></div>
+    </div>
+    <div class="copyright"><h6>© 2020 SKJF - Swiss Kinder und Jugend-Chor Festival - NABA</h6></div>
+  </footer> <!-- end of footer -->
+		
+	</div> <!-- end of wrapper -->
+</body>
 </html>

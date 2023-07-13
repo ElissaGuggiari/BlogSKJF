@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cori</title>
+	<link rel="stylesheet" href="css/stili.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@400;600&family=Ubuntu&display=swap" rel="stylesheet">
+	<!--codice per effettuare lo smooth scrolling-->
+<script>
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+</script>
+
+</head>
+
+			
+<body>
+	<div id="wrapper">
+		<header>
+			<div class="logoSKJF"></div>
+			<nav>
+				<ul>
+					<li><a href="index.html">festival</a></li>
+					<li><a href="pag_2.html" class="current">cori</a></li>
+					<li><a href="pag_3.html">biglietti</a></li>
+					<li><a href="pag_4.html">shop</a></li>
+					<li><a href="pag_5.html">contatti</a></li>
+				</ul>
+			</nav>
+		</header> <!--end of header-->
+		
+		
+			<main>
+				<div class="cover_small1"></div>		
+	
+				
+				
+				<div class="principal"><h1>cori principali</h1></div>				
+				
+				<div class="grid_coro_big float_left">
+					<div class="img_coro"> <img src="img/Coro_Clairiere.jpg" alt="Coro Clairière" class="flex_img_all"></div>
+					<div class="filtro_coro"></div>
+					<div class="titolo_coro"><h4>Coro Clairière</h4></div>
+					<div class="testo_coro"><p>Il coro di voci bianche Clairière del Condervatorio della Svizzera Italiana abbina all'impegno costante la continua esplorazione dei repertori e un ideale artistico perseguito con dedizione e gratificato da successi e riconoscimenti internazionali. <br>
+					Diretto da Brunella Clerici.</p></div>
+				</div> <!-- end of clairiere -->
+				
+				<div class="clear_short_right"></div>
+				<div class="grid_coro_big float_right">
+					<div class="img_coro"> <img src="img/jugendchor_atempo.jpg" alt="Jugendchor ATempo" class="flex_img_all"></div>
+					<div class="filtro_coro"></div>
+					<div class="titolo_coro"><h4>Jugendchor ATempo</h4></div>
+					<div class="testo_coro"><p>I giovani coristi sperimentano la propria voce con brani da ogni dove, con un linguaggio del corpo musicale e scenico, nonché con ritmi e allenamento melodico. Gli aspetti sociali del fare musica aiutano i ragazzi nel loro proseguimento di percorso. <br>
+					Diretto da Regina Hui.</p></div>
+				</div> <!-- end of jugendchor -->
+				<div class="clear_long"></div>
+				
+				<div class="grid_coro_big float_left">
+					<div class="img_coro"> <img src="img/annonciade.jpg" alt="L'Annonciade" class="flex_img_all"></div>
+					<div class="filtro_coro"></div>
+					<div class="titolo_coro"><h4>L'Annonciade</h4></div>
+					<div class="testo_coro"><p>lo scopo del coro è partecipare allo sviluppo dell'arte corale nella regione romanda. Il suo repertorio è composto da pezzi per voci all'unisono e voci miste, che vanno dalla musica religiosa alla moderna, compresa la musica popolare tradizionale. <br>Diretto da Fabien Vollery.</p></div>
+				</div> <!-- end of annonciade -->
+				
+				<div class="clear_short_right"></div>
+				<div class="grid_coro_big float_right">
+					<div class="img_coro"> <img src="img/Solothurn_Madchen.jpg" alt="Solothürn Mädchen" class="flex_img_all"></div>
+					<div class="filtro_coro"></div>
+					<div class="titolo_coro"><h4>Solothürn Mädchen</h4></div>
+					<div class="testo_coro"><p>I programmi concertistici annuali sono misti. Il linguaggio della "buona musica" fa appello sia ai cantanti che agli ascoltatori. <br>I pezzi sono interpretati con l'aiuto di coreografie e allo stesso tempo hanno un chiaro effetto sul pubblico. <br>Diretto da Lea Sherer.</p></div>
+				</div> <!-- end of Solothürn Mädchen -->
+				
+				<div class="clear_long"></div>
+				<div class="grid_coro_small float_left">
+					<div class="img_coro_small"> <img src="img/Choeur_Michel.jpg" alt="Choeur St-Michel" class="flex_img_all"></div>
+					<div class="filter_coro_small"> </div>
+					<div class="text_coro_small"><h4>Choeur St-Michel</h4></div>
+				</div> <!-- end of St Michel -->
+				
+				<div class="clear_short_right"></div>
+				<div class="grid_coro_small float_right">
+					<div class="img_coro_small"> <img src="img/Jugendchor_Singbox.jpg" alt="Jugendchor Singbox" class="flex_img_all"></div>
+					<div class="filter_coro_small"> </div>
+					<div class="text_coro_small"><h4>Jugendchor Singbox</h4></div>
+				</div> <!-- end of Jugendchor Singbox -->
+				<div class="clear_long"></div>
+				
+				<button class="button_big float_left"> <h4>scopri la lista completa</h4></button>
+				
+				<div class="clear_short_right"></div>
+				 <div class="grid_square float_right">
+					<div class="img_square"><img src="img/altri.jpg" alt="46 cori da tutta la Svizzera" class="flex_img_all"></div>
+					<div class="testo_square"><h4>e altri 46 cori da tutta la Svizzera!</h4></div>
+					<div class="filtro_square"> </div>
+
+				</div> 
+				<div class="clear"></div>
+				
+				
+
+		<div class="principal"><h1>programma</h1></div>				
+				
+				
+				<div class="grid_text float_left">
+					<div class="grid_text_1"> <h3>giovedì</h3></div>
+					<div class="grid_text_2"> <p>09.00 - 13.00 Concerto d'apertura <br>
+										13.30 - 14.15 Workshop <br><br>
+										13.00 - 14.00 Pranzo<br><br>
+										14.00 - 16.00 Canti in piazza<br>
+										14.30 - 15.30 Concerto 1<br>
+										14.30 - 15.15 Workshop<br>
+										15.00 - 16.30 Canti in piazza <br>
+										16.00 - 17.30 Workshop<br>
+										16.30 - 17.30 Concerto 2<br>
+										17.30 - 18.00 Open singing<br><br>
+										18.00 - 19.30 Cena<br><br>
+										19.15 - 19.45 Open singing<br>
+										20.00 - 21.30 Concerto 3<br>
+										22.00 - 23.00 Soirée</p></div>					 
+				</div> 
+			<div class="clear_short_right"></div>
+				<div class="grid_text float_right">
+					<div class="grid_text_1"> <h3>venerdì</h3></div>
+					<div class="grid_text_2"> <p>9.30 - 10.15 Workshop<br>
+										9.30 - 16.00 Concerto 4<br>
+										10.00 - 11.15 Matinée<br>
+										10.30 - 11.15 Workshop<br><br>
+										11.00 - 13.00 Pranzo<br><br>
+										12.30 - 13.30 Open singing<br>
+										13.30 - 14.15 Workshop<br>
+										14.00 - 16.00 Canti in piazza<br>
+										14.30 - 15.30 Open singing<br><br>
+										17.30 - 19.00 Cena<br><br>
+										19.15 - 19.45 Open singing<br>
+										20.00 - 21.00 Concerto in radio<br>
+										22.00 - 23.00 Concerto 5</p></div>					 
+				</div> 				
+				<div class="clear_long"></div>
+				<div class="grid_text float_left">
+					<div class="grid_text_1"> <h3>sabato</h3></div>
+					<div class="grid_text_2"> <p>9.30 - 10.15 Workshop<br>
+										10.00 - 12.00 Canti in piazza<br>
+										10.00 - 14.30 Workshop<br>
+										10.30 - 11.30 Workshop<br><br>
+										11.00 - 13.00 Pranzo<br><br>
+										11.30 - 13.00 Workshop<br>
+										12.30 - 13.30 Open singing<br>
+										13.00 - 15.00 Canti in piazza<br>
+										14.30 - 17.30 Concerto 6<br><br>
+										18.00 - 19.00 Cena<br><br>
+										19.15 - 19.45 Open singing<br>
+										20.00 - 21.30 Concerto 7<br>
+										22.00 - 02.00 Party per tutti!</p></div>					 
+				</div> 
+			<div class="clear_short_right"></div>
+				<div class="grid_text float_right">
+					<div class="grid_text_1"> <h3>domenica</h3></div>
+					<div class="grid_text_2"> <p>9.30 - 10.15 Workshop<br>
+										9.30 - 12.00 Concerto 8<br>
+										10.00 - 11.15 Matinée<br><br>
+										12.00 - 13.00 Pranzo<br><br>
+										14.00 - 15.00 Concerti in piazza<br>
+										15.00 - 17.00 Chiusura<br><br>
+										A rivederci al prossimo SKJF!</p></div>					 
+				</div> 	
+				<div class="clear"></div> <!-- end of programma -->
+		
+			</main> <!-- end of content -->
+		
+
+		
+	  <footer>
+    <h3 class="sponsor">i nostri partner e sponsor:</h3>
+    <div class="sponsor-icons flex">
+      <div><img src="img/fondation_suisa.png" alt="fondation suisa"></div>
+      <div><img src="img/ch.png" alt="svizzera"></div>
+      <div><img src="img/zurigo.png" alt="zurigo"></div>
+      <div><img src="img/atelier.png" alt="atelier winzeler"></div>
+    </div>
+    <h3 class="social">i nostri socials:</h3>
+    <div class="social-icons flex">
+      <div><a href="https://www.youtube.com/channel/UCHrQ-Hz76tHxav8AIaC6-9A/videos" target="_blank"><img src="img/YouTube.png" alt="canale Youtube SKJF"></a></div>
+      <div><a href="https://www.instagram.com/verein_skjf/?hl=de" target="_blank"><img src="img/Instagram.png" alt="profilo Instagram SKJF"></a></div>
+      <div><a href="https://www.facebook.com/SKJF-Schweizer-Kinder-und-Jugendchorfestival-183969058327876/" target="_blank"><img src="img/Facebook.png" alt="profilo Facebook SKJF"></a></div>
+    </div>
+    <div class="copyright"><h6>© 2020 SKJF - Swiss Kinder und Jugend-Chor Festival - NABA</h6></div>
+  </footer> <!-- end of footer -->
+		
+		</div> <!-- end of wrapper -->
+</body>
+</html>
